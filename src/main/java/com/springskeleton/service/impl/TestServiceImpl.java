@@ -5,21 +5,21 @@
  */
 package com.springskeleton.service.impl;
 
-import com.springskeleton.dao.ITestDao;
 import com.springskeleton.model.First;
-import com.springskeleton.service.ITestService;
 import javax.annotation.Resource;
 import org.springframework.stereotype.Service;
+import com.springskeleton.service.TestService;
+import com.springskeleton.dao.TestDao;
 
 /**
  *
  * @author krystofurr
  */
 @Service("testService")
-public class TestService extends BaseService implements ITestService {
+public class TestServiceImpl extends BaseServiceImpl implements TestService {
     
     @Resource(name = "testDao")
-    private ITestDao testDao;
+    private TestDao testDao;
 
     @Override
     public void test() {

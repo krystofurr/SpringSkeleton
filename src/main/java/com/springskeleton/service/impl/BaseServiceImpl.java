@@ -5,21 +5,21 @@
  */
 package com.springskeleton.service.impl;
 
-import com.springskeleton.dao.IBaseDao;
-import com.springskeleton.service.IBaseService;
 import java.util.List;
 import javax.annotation.Resource;
 import org.springframework.stereotype.Service;
+import com.springskeleton.service.BaseService;
+import com.springskeleton.dao.BaseDao;
 
 /**
  *
  * @author krystofurr
  */
 @Service("baseService")
-public abstract class BaseService implements IBaseService {
+public abstract class BaseServiceImpl implements BaseService {
 
     @Resource(name = "baseDao")
-    private IBaseDao baseDao;
+    private BaseDao baseDao;
 
     @Override
     public <T> List<T> findAll(Class<T> clazz) {

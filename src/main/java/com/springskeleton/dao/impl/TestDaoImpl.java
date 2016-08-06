@@ -5,14 +5,14 @@
  */
 package com.springskeleton.dao.impl;
 
-import com.springskeleton.dao.ITestDao;
 import org.springframework.stereotype.Repository;
+import com.springskeleton.dao.TestDao;
 
 /**
  *
  * @author krystofurr
  */
 @Repository("testDao")
-public class TestDaoImpl implements ITestDao {
+public class TestDaoImpl implements TestDao {
     
 }

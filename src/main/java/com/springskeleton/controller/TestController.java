@@ -6,8 +6,6 @@
 package com.springskeleton.controller;
 
 import com.springskeleton.controller.documentation.ApiDocConstant;
-import com.springskeleton.service.IEmailService;
-import com.springskeleton.service.ITestService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import javax.annotation.Resource;
@@ -15,6 +13,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import com.springskeleton.service.TestService;
+import com.springskeleton.service.EmailService;
 
 /**
  *
@@ -26,10 +26,10 @@ import org.springframework.web.bind.annotation.RequestMethod;
 public class TestController {
     
     @Resource(name = "testService")
-    ITestService testService;
+    TestService testService;
     
     @Resource(name = "emailService")
-    IEmailService emailService;
+    EmailService emailService;
 
     @ApiOperation(value=ApiDocConstant.TEST_METHOD1)
     @RequestMapping(method = RequestMethod.GET)

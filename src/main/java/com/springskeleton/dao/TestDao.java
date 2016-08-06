@@ -3,15 +3,14 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.springskeleton.service;
-
+package com.springskeleton.dao;
 
 /**
  *
  * @author krystofurr
  */
-public interface ITestService extends IBaseService {
+public interface TestDao {
     
-    public void test();
-
+    
+    
 }

@@ -5,7 +5,6 @@
  */
 package com.springskeleton.service.impl;
 
-import com.springskeleton.service.IEmailService;
 import javax.mail.Message;
 import javax.mail.MessagingException;
 import javax.mail.Session;
@@ -14,6 +13,7 @@ import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import com.springskeleton.service.EmailService;
 
 
 /**
@@ -21,7 +21,7 @@ import org.springframework.stereotype.Service;
  * @author krystofurr
  */
 @Service("emailService")
-public class EmailService implements IEmailService {
+public class EmailServiceImpl implements EmailService {
     
     @Autowired
     Session emailSession;

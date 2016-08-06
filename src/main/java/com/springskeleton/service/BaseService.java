@@ -11,7 +11,7 @@ import java.util.List;
  *
  * @author krystofurr
  */
-public interface IBaseService {
+public interface BaseService {
     
     public <T> List<T> findAll(Class<T> clazz);
 

@@ -7,7 +7,7 @@ package com.springskeleton.dao;
 
 import java.util.List;
  
-public interface IBaseDao {
+public interface BaseDao {
     
     public <T> List<T> findAll(Class<T> clazz);
 

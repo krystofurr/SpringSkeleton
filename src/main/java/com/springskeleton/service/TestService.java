@@ -5,12 +5,13 @@
  */
 package com.springskeleton.service;
 
+
 /**
  *
  * @author krystofurr
  */
-public interface IEmailService {
+public interface TestService extends BaseService {
     
-    public void sendStandardMessage(String to, String from, String subject, String text);
+    public void test();
 
 }
