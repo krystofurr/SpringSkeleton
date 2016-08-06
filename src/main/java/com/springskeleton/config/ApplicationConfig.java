@@ -67,6 +67,8 @@ public class ApplicationConfig extends WebMvcConfigurerAdapter implements Applic
       return engine;
     }
 
+    // Use this bean if you want to use .JSP files
+    
 //    @Bean  
 //    public UrlBasedViewResolver setupViewResolver() {  
 //        UrlBasedViewResolver resolver = new UrlBasedViewResolver();  
