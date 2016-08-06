@@ -6,7 +6,6 @@
 package com.springskeleton.controller;
 
 import com.springskeleton.controller.documentation.ApiDocConstant;
-import com.springskeleton.model.First;
 import com.springskeleton.service.IEmailService;
 import com.springskeleton.service.ITestService;
 import io.swagger.annotations.Api;
@@ -31,19 +30,13 @@ public class TestController {
     
     @Resource(name = "emailService")
     IEmailService emailService;
- 
-    
+
     @ApiOperation(value=ApiDocConstant.TEST_METHOD1)
     @RequestMapping(method = RequestMethod.GET)
     public String index() {
-        testService.save(new First(null, "testing"));
-        emailService.sendStandardMessage("yourEmail@blah.com",
-                                         "myEmail@blah.com",
-                                         "Testing Java Mail",
-                                         "Testing Java Mail");
         return "index";
     } 
-    
+
     @ApiOperation(value=ApiDocConstant.TEST_METHOD2)
     @RequestMapping(method = RequestMethod.POST)
     public String index2(ModelMap map) {
