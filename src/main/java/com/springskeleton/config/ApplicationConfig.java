@@ -92,6 +92,7 @@ public class ApplicationConfig extends WebMvcConfigurerAdapter implements Applic
         resolver.setPrefix("/WEB-INF/templates/");
         resolver.setSuffix(".html");
         resolver.setTemplateMode(TemplateMode.HTML);
+        resolver.setCacheable(false); // Allows static files to be changed without restarting Tomcat
         return resolver;
     }
  }
